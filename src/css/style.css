@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://s7d9.scene7.com/is/image/wileypublishing/wiley-website-research-abstract?ts=1759597239576&dpr=off")
+        no-repeat center center;
+    background-size: cover;
+}
+
+.right-side {
+    width: 40%;
+    /* Gradiente baseado na imagem: marinho escuro -> azul neon -> laranja/vermelho */
+    background: linear-gradient(125deg, #071229 28%, #00FBA8 50%, #071229 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Form styles (top-level, não aninhadas) */
+#register-form {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.right-side h1 {
+    margin: 0 0 12px 0;
+    font-size: 26px;
+    color: #ffffff; /* texto claro para contraste sobre o gradiente */
+    /* leve brilho para combinar com o visual neon da imagem */
+    text-shadow: 0 6px 18px rgba(0, 185, 255, 0.08),
+        0 2px 8px rgba(255, 106, 0, 0.06);
+    text-align: center;
+}
+
+.form-control {
+    margin-bottom: 16px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    outline: 0;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #49028b;
+    box-shadow: 0 0 0 6px rgba(108, 92, 231, 0.06);
+}
+
+.form-control small {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #e74c3c;
+    visibility: hidden;
+    height: 14px;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: linear-gradient(90deg, #6c5ce7 0%, #4e89ff 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 6px;
+    transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(78, 137, 255, 0.16);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 14px;
+    color: #555;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #00b9ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .screen {
+        flex-direction: column;
+    }
+    .left-side {
+        display: none;
+    }
+    .right-side {
+        width: 100%;
+        padding: 24px;
+    }
+    #register-form {
+        padding: 24px;
+    }
+}

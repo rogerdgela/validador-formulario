@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Validador de formulário</title>
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+    <body>
+        <div class="screen">
+            <div class="left-side"></div>
+            <div class="right-side">
+                <h1>Crie uma conta</h1>
+
+                <form
+                    id="register-form"
+                    class="validator"
+                    method="post"
+                    enctype="multipart/form-data"
+                >
+                    <div class="form-control">
+                        <label for="username">Nome de usuário</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            data-rules="required\nmin=3\nmax=15"
+                        />
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            data-rules="required"
+                        />
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Senha</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                        />
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="password2">Confirme a senha</label>
+                        <input
+                            type="password"
+                            id="password2"
+                            name="password2"
+                        />
+                        <small>Error message</small>
+                    </div>
+                    <button type="submit">Registrar</button>
+                    <div class="login-link">
+                        Já tem uma conta? <a href="#">Faça login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
