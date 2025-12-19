@@ -24,7 +24,7 @@ body {
 }
 
 .right-side {
-    width: 40%;
+    width: 45%;
     /* Gradiente baseado na imagem: marinho escuro -> azul neon -> laranja/vermelho */
     background: linear-gradient(125deg, #000 25%, #00FBA8 50%, #000 80%);
     display: flex;
@@ -38,7 +38,7 @@ body {
 #register-form {
     width: 100%;
     max-width: 420px;
-    background: #ffffff;
+    background: #ffffff62;
     padding: 32px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
