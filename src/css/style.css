@@ -26,7 +26,7 @@ body {
 .right-side {
     width: 40%;
     /* Gradiente baseado na imagem: marinho escuro -> azul neon -> laranja/vermelho */
-    background: linear-gradient(125deg, #071229 28%, #00FBA8 50%, #071229 100%);
+    background: linear-gradient(125deg, #000 25%, #00FBA8 50%, #000 80%);
     display: flex;
     flex-direction: column;
     align-items: center;
