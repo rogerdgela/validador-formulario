@@ -46,6 +46,23 @@ let validator = {
                             return `Máximo de ${rDetails[1]} caracteres`;
                         }
                         break;
+                    case "email":
+                        if (input.value != "") {
+                            let regex =
+                                /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                            if (!regex.test(input.value.toLowerCase())) {
+                                return "E-mail inválido";
+                            }
+                        }
+                        break;
+                    case "equal":
+                        let compareTo = form.querySelector(
+                            `input[name="${rDetails[1]}"]`
+                        );
+                        if (input.value != compareTo.value) {
+                            return "Campos não são iguais";
+                        }
+                        break;
                 }
             }
         }
@@ -64,13 +81,13 @@ let validator = {
         for (let i = 0; i < inputElements.length; i++) {
             inputElements[i].style = "";
         }
-        
-        let errorElements = form.querySelectorAll(".error");    
+
+        let errorElements = form.querySelectorAll(".error");
         for (let i = 0; i < errorElements.length; i++) {
             errorElement = errorElements[i];
             errorElement.remove();
         }
-    }
+    },
 };
 let form = document.querySelector(".validator");
 

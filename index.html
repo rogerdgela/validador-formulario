@@ -31,10 +31,10 @@
                     <div class="form-control">
                         <label for="email">Email</label>
                         <input
-                            type="email"
+                            type="text"
                             id="email"
                             name="email"
-                            data-rules="required"
+                            data-rules="required|email"
                         />
                         <small>Error message</small>
                     </div>
@@ -44,6 +44,7 @@
                             type="password"
                             id="password"
                             name="password"
+                            data-rules="required|min=6|max=18"
                         />
                         <small>Error message</small>
                     </div>
@@ -53,6 +54,7 @@
                             type="password"
                             id="password2"
                             name="password2"
+                            data-rules="required|equal=password"
                         />
                         <small>Error message</small>
                     </div>
